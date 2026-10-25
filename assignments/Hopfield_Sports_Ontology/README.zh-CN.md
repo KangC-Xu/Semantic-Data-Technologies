@@ -12,6 +12,8 @@
 3. 英文交付版保持插件开关 `Help → 简体中文界面 (Chinese UI)` 不勾选。首次使用时默认关闭，插件会记住选择；勾选后显示中文界面，取消勾选后恢复英文。OWL 本体本身只含英文标签，该开关只改变插件显示层。已收录的实体名称、英文标签、注释正文和作业描述也会随开关显示中文；IRI、数字、日期及查询变量保持原样。安装可选中文插件后才会出现这个开关；英文 OWL 不需要中文插件。
 4. `doc/screenshots/` 中保留了本体加载、HermiT 一致性和英文查询结果截图。
 
+插件安装和使用方法见[中文插件说明](../../plugins/chinese-ui-plugin/README.md)。安装时先关闭 Protégé，将 [chinese-ui-1.0.1.jar](../../plugins/chinese-ui-plugin/dist/chinese-ui-1.0.1.jar) 复制到自己 Protégé 安装目录的 `plugins/` 中，再重启 Protégé。
+
 ## 启动 HermiT 并检查推理
 
 1. 在 Protégé 中打开 `Reasoner` 菜单，选择 `HermiT`，再选择 `Start reasoner`。

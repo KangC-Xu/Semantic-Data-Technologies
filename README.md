@@ -27,7 +27,7 @@ GitHub displays HTML source. To view the illustrated guide, clone or download th
 
 The copied ontology, queries and result data are byte-identical to the checked assignment package. The validation record retains those checks; its ontology path is relative to the validation file for portability.
 
-The English OWL and queries are the coursework artifacts. Chinese guides and the optional local Chinese UI plugin support study. The plugin is not included or required to open the ontology; its display switch does not change the English OWL, entity IRIs, query text or result column names.
+The English OWL and queries are the coursework artifacts. Chinese guides and the optional Chinese UI plugin support study. The repository includes the [plugin installation instructions](plugins/chinese-ui-plugin/README.md) and [installable JAR](plugins/chinese-ui-plugin/dist/chinese-ui-1.0.1.jar). Close Protégé, copy the JAR into the `plugins/` directory of your own Protégé installation, then restart Protégé. The plugin is optional; its display switch does not change the English OWL, entity IRIs, query text or result column names.
 
 Data includes the final 26-player Argentina 2022 World Cup squad and the 16 teams in the Paris 2024 men's football competition. Other records are selected teaching examples; they do not form a complete sports database. See the guides for sources, date scope and explanations of empty query results.
 

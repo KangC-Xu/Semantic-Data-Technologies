@@ -12,6 +12,8 @@ This folder is the English submission package for the MOD004979 sports ontology 
 3. For the English submission, leave the plugin switch `Help → 简体中文界面 (Chinese UI)` unchecked. It is off on first use, and the plugin remembers the choice. Turning it on selects Chinese UI labels; turning it off restores English. The OWL contains English labels only; this switch changes the plugin display layer. Entity labels, recorded comments and the ontology description also switch for study; IRIs, numbers, dates and query variables stay intact. The switch is available only after installing the optional Chinese UI plugin; the English OWL works without it.
 4. The screenshot set in `doc/screenshots/` records the loaded ontology, HermiT consistency, and an English query result view.
 
+See the [Chinese UI plugin instructions](../../plugins/chinese-ui-plugin/README.md) for installation and usage. To install it, close Protégé, copy [chinese-ui-1.0.1.jar](../../plugins/chinese-ui-plugin/dist/chinese-ui-1.0.1.jar) into the `plugins/` directory of your own Protégé installation, then restart Protégé.
+
 ## Start HermiT and check inference
 
 1. In Protégé, open the `Reasoner` menu, choose `HermiT`, and choose `Start reasoner`.
