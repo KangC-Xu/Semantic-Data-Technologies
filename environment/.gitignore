@@ -1,0 +1,10 @@
+/tools/
+/downloads/
+/data/fuseki/*
+!/data/fuseki/templates/
+/data/fuseki/templates/*
+!/data/fuseki/templates/config-tdb
+!/data/fuseki/templates/config-tdb2
+__pycache__/
+.ipynb_checkpoints/
+*.log

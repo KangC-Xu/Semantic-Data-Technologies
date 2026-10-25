@@ -31,6 +31,12 @@ The English OWL and queries are the coursework artifacts. Chinese guides and the
 
 Data includes the final 26-player Argentina 2022 World Cup squad and the 16 teams in the Paris 2024 men's football competition. Other records are selected teaching examples; they do not form a complete sports database. See the guides for sources, date scope and explanations of empty query results.
 
+## Windows environment
+
+软件、安装恢复脚本和迁移说明集中在 [environment](environment/README.md)，包含 Protégé、Java 21、Fuseki 和 ARU Python/Jupyter 环境。另一台 Windows x64 电脑可按该说明恢复环境。
+
+新电脑首次安装可直接阅读 [中文五步操作](environment/快速开始.md)。
+
 ## License
 
 See [LICENSE](LICENSE). External reference sources remain subject to their respective terms.

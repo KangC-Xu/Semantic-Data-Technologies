@@ -1,0 +1,14 @@
+name: ARU
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - rdflib==7.6.0
+      - pyparsing==3.3.3
+      - SPARQLWrapper==2.0.0
+      - ipykernel==7.4.0
+      - jupyterlab==4.6.4
+      - jupyterlab-language-pack-zh-CN==4.5.post3
