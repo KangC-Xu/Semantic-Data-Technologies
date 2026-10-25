@@ -1,0 +1,9 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: List all recorded coaches of Argentina National Team.
+# The direct relationship includes historical appointments and does not imply a current appointment.
+SELECT DISTINCT ?coach
+WHERE {
+  sports:ArgentinaNationalTeam sports:hasCoach ?coach .
+}
+ORDER BY ?coach

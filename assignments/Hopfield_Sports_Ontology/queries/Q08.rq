@@ -1,0 +1,11 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: List all competitions held after 2020.
+SELECT DISTINCT ?competition ?year
+WHERE {
+  ?competition a/rdfs:subClassOf* sports:Competition ;
+               sports:competitionYear ?year .
+  FILTER (?year > 2020)
+}
+ORDER BY ?year ?competition

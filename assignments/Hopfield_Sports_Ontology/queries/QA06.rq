@@ -1,0 +1,9 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Where was a particular competition held?
+# Parameter: the 2022 FIFA World Cup. A tournament may be linked to multiple venues.
+SELECT DISTINCT ?venue
+WHERE {
+  sports:FIFAWorldCup2022 sports:heldAt ?venue .
+}
+ORDER BY ?venue

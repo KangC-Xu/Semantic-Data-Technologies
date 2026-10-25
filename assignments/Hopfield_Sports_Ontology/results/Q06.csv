@@ -1,0 +1,2 @@
+﻿match,homeTeam,homeScore,awayTeam,awayScore,penaltyHomeScore,penaltyAwayScore
+http://www.example.org/sports-ontology#WorldCupFinal2022,http://www.example.org/sports-ontology#ArgentinaNationalTeam,3,http://www.example.org/sports-ontology#FranceNationalTeam,3,4,2

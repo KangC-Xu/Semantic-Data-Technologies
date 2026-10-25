@@ -1,0 +1,9 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which sport does a particular athlete participate in?
+# Parameter: Lionel Messi. Replace the athlete IRI to query another athlete.
+SELECT DISTINCT ?sport
+WHERE {
+  sports:LionelMessi sports:participatesIn ?sport .
+}
+ORDER BY ?sport

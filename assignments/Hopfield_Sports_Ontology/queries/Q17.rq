@@ -1,0 +1,10 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: Which venues can host both football and rugby competitions?
+SELECT DISTINCT ?venue
+WHERE {
+  ?venue a/rdfs:subClassOf* sports:Venue ;
+         sports:canHostSport sports:Football, sports:Rugby .
+}
+ORDER BY ?venue

@@ -1,0 +1,17 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: What was the score of a specific match?
+# Parameter: the 2022 FIFA World Cup final. Show the match score and penalty-shootout score separately.
+SELECT ?homeTeam ?homeScore ?awayTeam ?awayScore ?penaltyHomeScore ?penaltyAwayScore ?resultText
+WHERE {
+  sports:WorldCupFinal2022 sports:homeTeam ?homeTeam ;
+                           sports:awayTeam ?awayTeam ;
+                           sports:homeScore ?homeScore ;
+                           sports:awayScore ?awayScore .
+  OPTIONAL { sports:WorldCupFinal2022 sports:penaltyHomeScore ?penaltyHomeScore . }
+  OPTIONAL { sports:WorldCupFinal2022 sports:penaltyAwayScore ?penaltyAwayScore . }
+  OPTIONAL {
+    sports:WorldCupFinal2022 sports:hasResult ?result .
+    ?result sports:resultText ?resultText .
+  }
+}

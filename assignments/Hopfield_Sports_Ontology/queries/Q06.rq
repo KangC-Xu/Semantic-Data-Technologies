@@ -1,0 +1,14 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: What were the scores of both teams in the 2022 FIFA World Cup final?
+# Home and away scores include extra time. Penalty-shootout scores are displayed separately and are not added to match goals.
+SELECT ?match ?homeTeam ?homeScore ?awayTeam ?awayScore ?penaltyHomeScore ?penaltyAwayScore
+WHERE {
+  sports:FIFAWorldCup2022 sports:finalMatch ?match .
+  ?match sports:homeTeam ?homeTeam ;
+         sports:awayTeam ?awayTeam ;
+         sports:homeScore ?homeScore ;
+         sports:awayScore ?awayScore .
+  OPTIONAL { ?match sports:penaltyHomeScore ?penaltyHomeScore . }
+  OPTIONAL { ?match sports:penaltyAwayScore ?penaltyAwayScore . }
+}

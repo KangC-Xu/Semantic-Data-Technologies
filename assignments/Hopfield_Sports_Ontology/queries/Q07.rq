@@ -1,0 +1,10 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: Which sport uses a tennis racket?
+SELECT DISTINCT ?sport
+WHERE {
+  ?sport a/rdfs:subClassOf* sports:Sport ;
+         sports:usesEquipment sports:TennisRacket .
+}
+ORDER BY ?sport

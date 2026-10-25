@@ -1,0 +1,11 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which two teams have participated in the same competition?
+# Parameter: the 2022 FIFA World Cup. Sort team IRIs to exclude self-pairs and duplicate reversed pairs.
+SELECT DISTINCT ?teamA ?teamB
+WHERE {
+  ?teamA sports:competedIn sports:FIFAWorldCup2022 .
+  ?teamB sports:competedIn sports:FIFAWorldCup2022 .
+  FILTER (STR(?teamA) < STR(?teamB))
+}
+ORDER BY ?teamA ?teamB

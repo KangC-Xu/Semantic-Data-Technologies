@@ -1,0 +1,10 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: Which teams play basketball?
+SELECT DISTINCT ?team
+WHERE {
+  ?team a/rdfs:subClassOf* sports:SportsTeam ;
+        sports:playsSport sports:Basketball .
+}
+ORDER BY ?team

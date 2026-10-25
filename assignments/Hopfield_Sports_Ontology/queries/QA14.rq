@@ -1,0 +1,23 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Question: Can teammates of a particular athlete be identified from membership records?
+# Parameter: Lionel Messi. Require the same team and overlapping membership intervals, and exclude the athlete himself.
+# A missing end date is treated as an open-ended membership record.
+SELECT DISTINCT ?teammate ?team ?messiFrom ?messiTo ?teammateFrom ?teammateTo
+WHERE {
+  ?messiMembership a sports:TeamMembership ;
+                   sports:memberAthlete sports:LionelMessi ;
+                   sports:membershipTeam ?team ;
+                   sports:validFrom ?messiFrom .
+  OPTIONAL { ?messiMembership sports:validTo ?messiTo . }
+  ?otherMembership a sports:TeamMembership ;
+                   sports:memberAthlete ?teammate ;
+                   sports:membershipTeam ?team ;
+                   sports:validFrom ?teammateFrom .
+  OPTIONAL { ?otherMembership sports:validTo ?teammateTo . }
+  FILTER (?teammate != sports:LionelMessi)
+  FILTER (?messiFrom <= COALESCE(?teammateTo, "9999-12-31T00:00:00"^^xsd:dateTime))
+  FILTER (?teammateFrom <= COALESCE(?messiTo, "9999-12-31T00:00:00"^^xsd:dateTime))
+}
+ORDER BY ?team ?teammate ?messiFrom ?teammateFrom

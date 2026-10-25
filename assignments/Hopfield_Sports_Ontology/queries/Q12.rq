@@ -1,0 +1,12 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: What equipment is associated with basketball athletes?
+# Follow the athlete-to-sport-to-equipment path; this describes sport-level equipment, not individual usage observations.
+SELECT DISTINCT ?athlete ?equipment
+WHERE {
+  ?athlete a/rdfs:subClassOf* sports:Athlete ;
+           sports:participatesIn sports:Basketball .
+  sports:Basketball sports:usesEquipment ?equipment .
+}
+ORDER BY ?athlete ?equipment

@@ -1,0 +1,35 @@
+{
+  "ontology": "../Hopfield_Sports_Ontology.owl",
+  "owl2dlProfile": {
+    "ok": true,
+    "violationCount": 0
+  },
+  "consistent": true,
+  "unsatisfiableClasses": [],
+  "inferenceChecks": {
+    "FootballIsSport": true,
+    "LusailStadiumIsVenue": true,
+    "hasAthleteInverseMemberOfDeclared": true,
+    "hasAthleteInverseMemberOfDataCheck": true
+  },
+  "negativeCases": [
+    {
+      "name": "athleteVenueDualType",
+      "expectedInconsistent": true,
+      "actualInconsistent": true,
+      "pass": true
+    },
+    {
+      "name": "matchTwoDifferentHomeScore",
+      "expectedInconsistent": true,
+      "actualInconsistent": true,
+      "pass": true
+    },
+    {
+      "name": "negativeVenueCapacity",
+      "expectedInconsistent": true,
+      "actualInconsistent": true,
+      "pass": true
+    }
+  ]
+}

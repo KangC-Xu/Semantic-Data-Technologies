@@ -1,0 +1,27 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Question: Does an athlete reference a team that is not declared as a team in the ontology?
+# Run against the original asserted graph. Range inference can otherwise classify an undeclared reference as a team.
+# A declared SportsTeam subclass is valid. A generic NamedIndividual declaration alone does not establish a team type.
+SELECT DISTINCT ?athlete ?team ?source ?issue
+WHERE {
+  {
+    VALUES ?relation { sports:memberOf sports:belongsTo }
+    ?athlete ?relation ?team .
+    BIND (STRAFTER(STR(?relation), "#") AS ?source)
+  }
+  UNION
+  {
+    ?membership a sports:TeamMembership ;
+                sports:memberAthlete ?athlete ;
+                sports:membershipTeam ?team .
+    BIND ("TeamMembership" AS ?source)
+  }
+  FILTER NOT EXISTS { ?team a/rdfs:subClassOf* sports:SportsTeam . }
+  BIND (IF(EXISTS { ?team a owl:NamedIndividual . },
+           "Declared individual without a SportsTeam or team-subclass type",
+           "No team type or NamedIndividual declaration") AS ?issue)
+}
+ORDER BY ?athlete ?team ?source

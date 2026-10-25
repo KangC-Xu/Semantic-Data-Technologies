@@ -1,0 +1,21 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Question: Which athletes were under 25 and playing for a basketball team?
+# Use 1 July 2024 as the common reference date for both the stored age snapshot and the membership interval.
+SELECT DISTINCT ?athlete ?age ?team
+WHERE {
+  ?athlete a/rdfs:subClassOf* sports:Athlete ;
+           sports:athleteAge ?age .
+  ?membership a sports:TeamMembership ;
+              sports:memberAthlete ?athlete ;
+              sports:membershipTeam ?team ;
+              sports:validFrom ?from .
+  OPTIONAL { ?membership sports:validTo ?to . }
+  ?team sports:playsSport sports:Basketball .
+  FILTER (?age < 25)
+  FILTER (?from <= "2024-07-01T00:00:00"^^xsd:dateTime)
+  FILTER (!BOUND(?to) || ?to >= "2024-07-01T00:00:00"^^xsd:dateTime)
+}
+ORDER BY ?age ?athlete ?team

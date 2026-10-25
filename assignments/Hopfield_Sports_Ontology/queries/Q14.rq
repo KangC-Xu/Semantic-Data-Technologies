@@ -1,0 +1,7 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: In which year were the Los Angeles Lakers established?
+SELECT ?establishYear
+WHERE {
+  sports:LosAngelesLakers sports:establishYear ?establishYear .
+}

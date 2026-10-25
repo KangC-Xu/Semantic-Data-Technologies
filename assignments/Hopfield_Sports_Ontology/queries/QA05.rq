@@ -1,0 +1,11 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: Which teams participated in a particular competition?
+# Parameter: the 2022 FIFA World Cup. Results cover only teams entered in this dataset.
+SELECT DISTINCT ?team
+WHERE {
+  ?team a/rdfs:subClassOf* sports:SportsTeam ;
+        sports:competedIn sports:FIFAWorldCup2022 .
+}
+ORDER BY ?team

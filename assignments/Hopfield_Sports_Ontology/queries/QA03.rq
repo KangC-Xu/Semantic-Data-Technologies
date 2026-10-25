@@ -1,0 +1,14 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which athletes belong to a specified team?
+# Parameters: Argentina National Team and its 2022 FIFA World Cup squad. Membership dates are shown when recorded.
+SELECT DISTINCT ?athlete ?from ?to
+WHERE {
+  ?membership a sports:TeamMembership ;
+              sports:membershipTeam sports:ArgentinaNationalTeam ;
+              sports:membershipCompetition sports:FIFAWorldCup2022 ;
+              sports:memberAthlete ?athlete .
+  OPTIONAL { ?membership sports:validFrom ?from . }
+  OPTIONAL { ?membership sports:validTo ?to . }
+}
+ORDER BY ?athlete

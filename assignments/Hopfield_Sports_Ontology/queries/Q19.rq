@@ -1,0 +1,7 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: What is Cristiano Ronaldo's nationality?
+SELECT ?nationality
+WHERE {
+  sports:CristianoRonaldo sports:nationality ?nationality .
+}

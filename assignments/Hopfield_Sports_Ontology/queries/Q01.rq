@@ -1,0 +1,10 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: Which athletes participate in football?
+SELECT DISTINCT ?athlete
+WHERE {
+  ?athlete a/rdfs:subClassOf* sports:Athlete ;
+           sports:participatesIn sports:Football .
+}
+ORDER BY ?athlete

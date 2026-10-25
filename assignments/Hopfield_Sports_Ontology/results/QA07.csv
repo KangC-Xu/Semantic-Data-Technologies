@@ -1,0 +1,2 @@
+﻿homeTeam,homeScore,awayTeam,awayScore,penaltyHomeScore,penaltyAwayScore,resultText
+http://www.example.org/sports-ontology#ArgentinaNationalTeam,3,http://www.example.org/sports-ontology#FranceNationalTeam,3,4,2,3:3; penalties 4:2

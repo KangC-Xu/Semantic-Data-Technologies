@@ -1,0 +1,46 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Question: Can contradictory sports information be detected?
+# Check explicit disjoint types, negative scores, and unequal values of functional data properties.
+# These are partial data checks. Use HermiT separately to verify full OWL logical consistency.
+SELECT DISTINCT ?issue ?entity ?detail
+WHERE {
+  {
+    {
+      ?classA (owl:disjointWith|^owl:disjointWith) ?classB .
+    }
+    UNION
+    {
+      ?axiom a owl:AllDisjointClasses ; owl:members ?list .
+      ?list rdf:rest*/rdf:first ?classA, ?classB .
+    }
+    ?entity a/rdfs:subClassOf* ?classA, ?classB .
+    FILTER (STR(?classA) < STR(?classB))
+    BIND ("Disjoint type conflict" AS ?issue)
+    BIND (CONCAT(STR(?classA), " / ", STR(?classB)) AS ?detail)
+  }
+  UNION
+  {
+    VALUES ?scoreProperty {
+      sports:homeScore sports:awayScore
+      sports:penaltyHomeScore sports:penaltyAwayScore
+    }
+    ?entity ?scoreProperty ?score .
+    FILTER (?score < 0)
+    BIND ("Negative score" AS ?issue)
+    BIND (CONCAT(STR(?scoreProperty), " = ", STR(?score)) AS ?detail)
+  }
+  UNION
+  {
+    ?property a owl:DatatypeProperty, owl:FunctionalProperty .
+    ?entity ?property ?valueA, ?valueB .
+    FILTER (?valueA != ?valueB)
+    FILTER (STR(?valueA) < STR(?valueB))
+    BIND ("Unequal values of a functional data property" AS ?issue)
+    BIND (CONCAT(STR(?property), " = ", STR(?valueA), " / ", STR(?valueB)) AS ?detail)
+  }
+}
+ORDER BY ?issue ?entity ?detail

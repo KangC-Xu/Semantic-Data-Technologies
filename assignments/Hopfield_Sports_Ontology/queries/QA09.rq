@@ -1,0 +1,9 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which competitions take place at a particular venue?
+# Parameter: Lusail Stadium.
+SELECT DISTINCT ?competition
+WHERE {
+  ?competition sports:heldAt sports:LusailStadium .
+}
+ORDER BY ?competition

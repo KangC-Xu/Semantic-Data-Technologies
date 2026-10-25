@@ -1,0 +1,18 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which football competitions include a match in which the winning team scored more than three goals?
+# Use the winning team's home or away score. Penalty-shootout goals are excluded.
+SELECT DISTINCT ?competition ?match ?winner ?goals
+WHERE {
+  ?competition sports:competitionSport sports:Football .
+  ?match sports:inCompetition ?competition ;
+         sports:hasWinner ?winner ;
+         sports:homeTeam ?homeTeam ;
+         sports:awayTeam ?awayTeam ;
+         sports:homeScore ?homeScore ;
+         sports:awayScore ?awayScore .
+  FILTER (?winner IN (?homeTeam, ?awayTeam))
+  BIND (IF(?winner = ?homeTeam, ?homeScore, ?awayScore) AS ?goals)
+  FILTER (?goals > 3)
+}
+ORDER BY ?competition ?match

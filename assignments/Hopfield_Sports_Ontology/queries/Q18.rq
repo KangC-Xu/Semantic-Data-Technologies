@@ -1,0 +1,10 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: How many teams participated in the Paris 2024 men's Olympic football tournament?
+# Count the tournament-specific Olympic teams separately from senior national teams and other Olympic events.
+SELECT (COUNT(DISTINCT ?team) AS ?teamCount)
+WHERE {
+  ?team a/rdfs:subClassOf* sports:SportsTeam ;
+        sports:competedIn sports:ParisOlympicFootball2024 .
+}

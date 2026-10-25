@@ -1,0 +1,9 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which teams belong to a particular league?
+# Parameter: the NBA.
+SELECT DISTINCT ?team
+WHERE {
+  sports:NBA sports:hasTeam ?team .
+}
+ORDER BY ?team

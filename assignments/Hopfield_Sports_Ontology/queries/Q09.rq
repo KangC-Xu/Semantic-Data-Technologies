@@ -1,0 +1,11 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: Which venues have a spectator capacity greater than 70,000?
+SELECT DISTINCT ?venue ?capacity
+WHERE {
+  ?venue a/rdfs:subClassOf* sports:Venue ;
+         sports:venueCapacity ?capacity .
+  FILTER (?capacity > 70000)
+}
+ORDER BY DESC(?capacity) ?venue

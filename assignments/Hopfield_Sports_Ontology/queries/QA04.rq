@@ -1,0 +1,16 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Question: Who was the coach of a particular team on a specified date?
+# Parameters: Argentina National Team and 18 December 2022. Select coaching assignments whose recorded interval contains that date.
+SELECT DISTINCT ?coach ?from ?to
+WHERE {
+  ?assignment a sports:CoachingAssignment ;
+              sports:assignmentTeam sports:ArgentinaNationalTeam ;
+              sports:assignmentCoach ?coach ;
+              sports:validFrom ?from .
+  OPTIONAL { ?assignment sports:validTo ?to . }
+  FILTER (?from <= "2022-12-18T00:00:00"^^xsd:dateTime)
+  FILTER (!BOUND(?to) || ?to >= "2022-12-18T00:00:00"^^xsd:dateTime)
+}
+ORDER BY ?coach

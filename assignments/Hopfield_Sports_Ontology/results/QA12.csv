@@ -1,0 +1,16 @@
+﻿teamA,teamB
+http://www.example.org/sports-ontology#ArgentinaNationalTeam,http://www.example.org/sports-ontology#CroatiaNationalTeam
+http://www.example.org/sports-ontology#ArgentinaNationalTeam,http://www.example.org/sports-ontology#EnglandNationalTeam
+http://www.example.org/sports-ontology#ArgentinaNationalTeam,http://www.example.org/sports-ontology#FranceNationalTeam
+http://www.example.org/sports-ontology#ArgentinaNationalTeam,http://www.example.org/sports-ontology#IranNationalTeam
+http://www.example.org/sports-ontology#ArgentinaNationalTeam,http://www.example.org/sports-ontology#PortugalNationalTeam
+http://www.example.org/sports-ontology#CroatiaNationalTeam,http://www.example.org/sports-ontology#EnglandNationalTeam
+http://www.example.org/sports-ontology#CroatiaNationalTeam,http://www.example.org/sports-ontology#FranceNationalTeam
+http://www.example.org/sports-ontology#CroatiaNationalTeam,http://www.example.org/sports-ontology#IranNationalTeam
+http://www.example.org/sports-ontology#CroatiaNationalTeam,http://www.example.org/sports-ontology#PortugalNationalTeam
+http://www.example.org/sports-ontology#EnglandNationalTeam,http://www.example.org/sports-ontology#FranceNationalTeam
+http://www.example.org/sports-ontology#EnglandNationalTeam,http://www.example.org/sports-ontology#IranNationalTeam
+http://www.example.org/sports-ontology#EnglandNationalTeam,http://www.example.org/sports-ontology#PortugalNationalTeam
+http://www.example.org/sports-ontology#FranceNationalTeam,http://www.example.org/sports-ontology#IranNationalTeam
+http://www.example.org/sports-ontology#FranceNationalTeam,http://www.example.org/sports-ontology#PortugalNationalTeam
+http://www.example.org/sports-ontology#IranNationalTeam,http://www.example.org/sports-ontology#PortugalNationalTeam

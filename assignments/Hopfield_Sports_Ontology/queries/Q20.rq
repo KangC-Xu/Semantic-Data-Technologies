@@ -1,0 +1,8 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: What equipment is used in track and field?
+SELECT DISTINCT ?equipment
+WHERE {
+  sports:TrackAndField sports:usesEquipment ?equipment .
+}
+ORDER BY ?equipment

@@ -1,0 +1,12 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which athletes participated in the 2022 FIFA World Cup?
+# Participation records identify each athlete and, when recorded, the team they represented.
+SELECT DISTINCT ?athlete ?team
+WHERE {
+  ?participation a sports:AthleteParticipation ;
+                 sports:participationAthlete ?athlete ;
+                 sports:participationCompetition sports:FIFAWorldCup2022 .
+  OPTIONAL { ?participation sports:representingTeam ?team . }
+}
+ORDER BY ?athlete

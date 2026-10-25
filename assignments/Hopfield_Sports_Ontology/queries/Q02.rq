@@ -1,0 +1,11 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: How many athletes are in Argentina's 2022 FIFA World Cup squad?
+# Count competition-specific membership records, rather than mixing club and national-team memberships from different periods.
+SELECT (COUNT(DISTINCT ?athlete) AS ?athleteCount)
+WHERE {
+  ?membership a sports:TeamMembership ;
+              sports:membershipTeam sports:ArgentinaNationalTeam ;
+              sports:membershipCompetition sports:FIFAWorldCup2022 ;
+              sports:memberAthlete ?athlete .
+}

@@ -1,0 +1,10 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Question: Which competitions were held at Lusail Stadium?
+SELECT DISTINCT ?competition
+WHERE {
+  ?competition a/rdfs:subClassOf* sports:Competition ;
+               sports:heldAt sports:LusailStadium .
+}
+ORDER BY ?competition

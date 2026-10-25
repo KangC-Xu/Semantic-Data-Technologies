@@ -1,0 +1,1282 @@
+{
+  "ontology": "Hopfield_Sports_Ontology.owl",
+  "triple_count": 2799,
+  "results": [
+    {
+      "query": "Q01",
+      "query_file": "queries/Q01.rq",
+      "columns": [
+        "athlete"
+      ],
+      "row_count": 28,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#AlejandroGomez"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AlexisMacAllister"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AngelCorrea"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AngelDiMaria"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CristianRomero"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CristianoRonaldo"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EmilianoMartinez"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EnzoFernandez"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ExequielPalacios"
+        ],
+        [
+          "http://www.example.org/sports-ontology#FrancoArmani"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GermanPezzella"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GeronimoRulli"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GonzaloMontiel"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GuidoRodriguez"
+        ],
+        [
+          "http://www.example.org/sports-ontology#JuanFoyth"
+        ],
+        [
+          "http://www.example.org/sports-ontology#JulianAlvarez"
+        ],
+        [
+          "http://www.example.org/sports-ontology#KylianMbappe"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LautaroMartinez"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LeandroParedes"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LionelMessi"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LisandroMartinez"
+        ],
+        [
+          "http://www.example.org/sports-ontology#MarcosAcuna"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NahuelMolina"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NicolasOtamendi"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NicolasTagliafico"
+        ],
+        [
+          "http://www.example.org/sports-ontology#PauloDybala"
+        ],
+        [
+          "http://www.example.org/sports-ontology#RodrigoDePaul"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ThiagoAlmada"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q02",
+      "query_file": "queries/Q02.rq",
+      "columns": [
+        "athleteCount"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "26"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q03",
+      "query_file": "queries/Q03.rq",
+      "columns": [
+        "athlete",
+        "team"
+      ],
+      "row_count": 28,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#AlejandroGomez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AlexisMacAllister",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AngelCorrea",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AngelDiMaria",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CristianRomero",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CristianoRonaldo",
+          "http://www.example.org/sports-ontology#PortugalNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EmilianoMartinez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EnzoFernandez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ExequielPalacios",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#FrancoArmani",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GermanPezzella",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GeronimoRulli",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GonzaloMontiel",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GuidoRodriguez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#JuanFoyth",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#JulianAlvarez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#KylianMbappe",
+          "http://www.example.org/sports-ontology#FranceNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LautaroMartinez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LeandroParedes",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LionelMessi",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LisandroMartinez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#MarcosAcuna",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NahuelMolina",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NicolasOtamendi",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NicolasTagliafico",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#PauloDybala",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#RodrigoDePaul",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ThiagoAlmada",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q04",
+      "query_file": "queries/Q04.rq",
+      "columns": [
+        "competition"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#FIFAWorldCup2022"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q05",
+      "query_file": "queries/Q05.rq",
+      "columns": [
+        "coach"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#LionelScaloni"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q06",
+      "query_file": "queries/Q06.rq",
+      "columns": [
+        "match",
+        "homeTeam",
+        "homeScore",
+        "awayTeam",
+        "awayScore",
+        "penaltyHomeScore",
+        "penaltyAwayScore"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#WorldCupFinal2022",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "3",
+          "http://www.example.org/sports-ontology#FranceNationalTeam",
+          "3",
+          "4",
+          "2"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q07",
+      "query_file": "queries/Q07.rq",
+      "columns": [
+        "sport"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#Tennis"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q08",
+      "query_file": "queries/Q08.rq",
+      "columns": [
+        "competition",
+        "year"
+      ],
+      "row_count": 5,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#FIFAWorldCup2022",
+          "2022"
+        ],
+        [
+          "http://www.example.org/sports-ontology#USOpen2023",
+          "2023"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ParisOlympic2024",
+          "2024"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ParisOlympicBasketball2024",
+          "2024"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ParisOlympicFootball2024",
+          "2024"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q09",
+      "query_file": "queries/Q09.rq",
+      "columns": [
+        "venue",
+        "capacity"
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#LusailStadium",
+          "88966"
+        ],
+        [
+          "http://www.example.org/sports-ontology#StadeDeFrance",
+          "80000"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q10",
+      "query_file": "queries/Q10.rq",
+      "columns": [
+        "opponent",
+        "match",
+        "competition"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#KylianMbappe",
+          "http://www.example.org/sports-ontology#WorldCupFinal2022",
+          "http://www.example.org/sports-ontology#FIFAWorldCup2022"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q11",
+      "query_file": "queries/Q11.rq",
+      "columns": [
+        "team"
+      ],
+      "row_count": 5,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#GoldenStateWarriors"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LosAngelesLakers"
+        ],
+        [
+          "http://www.example.org/sports-ontology#MilwaukeeBucks"
+        ],
+        [
+          "http://www.example.org/sports-ontology#MinnesotaTimberwolves"
+        ],
+        [
+          "http://www.example.org/sports-ontology#SanAntonioSpurs"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q12",
+      "query_file": "queries/Q12.rq",
+      "columns": [
+        "athlete",
+        "equipment"
+      ],
+      "row_count": 12,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#AnthonyEdwards",
+          "http://www.example.org/sports-ontology#BasketballBall"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AnthonyEdwards",
+          "http://www.example.org/sports-ontology#BasketballShoes"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GiannisAntetokounmpo",
+          "http://www.example.org/sports-ontology#BasketballBall"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GiannisAntetokounmpo",
+          "http://www.example.org/sports-ontology#BasketballShoes"
+        ],
+        [
+          "http://www.example.org/sports-ontology#KevinDurant",
+          "http://www.example.org/sports-ontology#BasketballBall"
+        ],
+        [
+          "http://www.example.org/sports-ontology#KevinDurant",
+          "http://www.example.org/sports-ontology#BasketballShoes"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LeBronJames",
+          "http://www.example.org/sports-ontology#BasketballBall"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LeBronJames",
+          "http://www.example.org/sports-ontology#BasketballShoes"
+        ],
+        [
+          "http://www.example.org/sports-ontology#StephenCurry",
+          "http://www.example.org/sports-ontology#BasketballBall"
+        ],
+        [
+          "http://www.example.org/sports-ontology#StephenCurry",
+          "http://www.example.org/sports-ontology#BasketballShoes"
+        ],
+        [
+          "http://www.example.org/sports-ontology#VictorWembanyama",
+          "http://www.example.org/sports-ontology#BasketballBall"
+        ],
+        [
+          "http://www.example.org/sports-ontology#VictorWembanyama",
+          "http://www.example.org/sports-ontology#BasketballShoes"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q13",
+      "query_file": "queries/Q13.rq",
+      "columns": [
+        "coach",
+        "team"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#DavidFerrer",
+          "http://www.example.org/sports-ontology#SpainDavisCupTeam"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q14",
+      "query_file": "queries/Q14.rq",
+      "columns": [
+        "establishYear"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "1947"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q15",
+      "query_file": "queries/Q15.rq",
+      "columns": [
+        "coach",
+        "footballTeam",
+        "basketballTeam"
+      ],
+      "row_count": 0,
+      "rows": [],
+      "status": "ok"
+    },
+    {
+      "query": "Q16",
+      "query_file": "queries/Q16.rq",
+      "columns": [
+        "competition",
+        "match",
+        "winner",
+        "goals"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#FIFAWorldCup2022",
+          "http://www.example.org/sports-ontology#EnglandIran2022",
+          "http://www.example.org/sports-ontology#EnglandNationalTeam",
+          "6"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q17",
+      "query_file": "queries/Q17.rq",
+      "columns": [
+        "venue"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#StadeDeFrance"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q18",
+      "query_file": "queries/Q18.rq",
+      "columns": [
+        "teamCount"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "16"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q19",
+      "query_file": "queries/Q19.rq",
+      "columns": [
+        "nationality"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "Portugal"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q20",
+      "query_file": "queries/Q20.rq",
+      "columns": [
+        "equipment"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#RunningSpikes"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q21",
+      "query_file": "queries/Q21.rq",
+      "columns": [
+        "athlete",
+        "age",
+        "team"
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#VictorWembanyama",
+          "20",
+          "http://www.example.org/sports-ontology#SanAntonioSpurs"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AnthonyEdwards",
+          "22",
+          "http://www.example.org/sports-ontology#MinnesotaTimberwolves"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "Q22",
+      "query_file": "queries/Q22.rq",
+      "columns": [
+        "team",
+        "titles"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#BrazilNationalTeam",
+          "5"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA01",
+      "query_file": "queries/QA01.rq",
+      "columns": [
+        "athlete"
+      ],
+      "row_count": 6,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#AnthonyEdwards"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GiannisAntetokounmpo"
+        ],
+        [
+          "http://www.example.org/sports-ontology#KevinDurant"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LeBronJames"
+        ],
+        [
+          "http://www.example.org/sports-ontology#StephenCurry"
+        ],
+        [
+          "http://www.example.org/sports-ontology#VictorWembanyama"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA02",
+      "query_file": "queries/QA02.rq",
+      "columns": [
+        "sport"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#Football"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA03",
+      "query_file": "queries/QA03.rq",
+      "columns": [
+        "athlete",
+        "from",
+        "to"
+      ],
+      "row_count": 26,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#AlejandroGomez",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AlexisMacAllister",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AngelCorrea",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AngelDiMaria",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CristianRomero",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EmilianoMartinez",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EnzoFernandez",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ExequielPalacios",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#FrancoArmani",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GermanPezzella",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GeronimoRulli",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GonzaloMontiel",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GuidoRodriguez",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#JuanFoyth",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#JulianAlvarez",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LautaroMartinez",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LeandroParedes",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LionelMessi",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LisandroMartinez",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#MarcosAcuna",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NahuelMolina",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NicolasOtamendi",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NicolasTagliafico",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#PauloDybala",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#RodrigoDePaul",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ThiagoAlmada",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA04",
+      "query_file": "queries/QA04.rq",
+      "columns": [
+        "coach",
+        "from",
+        "to"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#LionelScaloni",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA05",
+      "query_file": "queries/QA05.rq",
+      "columns": [
+        "team"
+      ],
+      "row_count": 6,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CroatiaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EnglandNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#FranceNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#IranNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#PortugalNationalTeam"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA06",
+      "query_file": "queries/QA06.rq",
+      "columns": [
+        "venue"
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#KhalifaInternationalStadium"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LusailStadium"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA07",
+      "query_file": "queries/QA07.rq",
+      "columns": [
+        "homeTeam",
+        "homeScore",
+        "awayTeam",
+        "awayScore",
+        "penaltyHomeScore",
+        "penaltyAwayScore",
+        "resultText"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "3",
+          "http://www.example.org/sports-ontology#FranceNationalTeam",
+          "3",
+          "4",
+          "2",
+          "3:3; penalties 4:2"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA08",
+      "query_file": "queries/QA08.rq",
+      "columns": [
+        "team"
+      ],
+      "row_count": 5,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#GoldenStateWarriors"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LosAngelesLakers"
+        ],
+        [
+          "http://www.example.org/sports-ontology#MilwaukeeBucks"
+        ],
+        [
+          "http://www.example.org/sports-ontology#MinnesotaTimberwolves"
+        ],
+        [
+          "http://www.example.org/sports-ontology#SanAntonioSpurs"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA09",
+      "query_file": "queries/QA09.rq",
+      "columns": [
+        "competition"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#FIFAWorldCup2022"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA10",
+      "query_file": "queries/QA10.rq",
+      "columns": [
+        "equipment"
+      ],
+      "row_count": 2,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#TennisBall"
+        ],
+        [
+          "http://www.example.org/sports-ontology#TennisRacket"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA11",
+      "query_file": "queries/QA11.rq",
+      "columns": [
+        "competition",
+        "team"
+      ],
+      "row_count": 1,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#FIFAWorldCup2022",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA12",
+      "query_file": "queries/QA12.rq",
+      "columns": [
+        "teamA",
+        "teamB"
+      ],
+      "row_count": 15,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "http://www.example.org/sports-ontology#CroatiaNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "http://www.example.org/sports-ontology#EnglandNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "http://www.example.org/sports-ontology#FranceNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "http://www.example.org/sports-ontology#IranNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "http://www.example.org/sports-ontology#PortugalNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CroatiaNationalTeam",
+          "http://www.example.org/sports-ontology#EnglandNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CroatiaNationalTeam",
+          "http://www.example.org/sports-ontology#FranceNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CroatiaNationalTeam",
+          "http://www.example.org/sports-ontology#IranNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CroatiaNationalTeam",
+          "http://www.example.org/sports-ontology#PortugalNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EnglandNationalTeam",
+          "http://www.example.org/sports-ontology#FranceNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EnglandNationalTeam",
+          "http://www.example.org/sports-ontology#IranNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EnglandNationalTeam",
+          "http://www.example.org/sports-ontology#PortugalNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#FranceNationalTeam",
+          "http://www.example.org/sports-ontology#IranNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#FranceNationalTeam",
+          "http://www.example.org/sports-ontology#PortugalNationalTeam"
+        ],
+        [
+          "http://www.example.org/sports-ontology#IranNationalTeam",
+          "http://www.example.org/sports-ontology#PortugalNationalTeam"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA13",
+      "query_file": "queries/QA13.rq",
+      "columns": [
+        "athlete",
+        "team",
+        "source",
+        "issue"
+      ],
+      "row_count": 0,
+      "rows": [],
+      "status": "ok"
+    },
+    {
+      "query": "QA14",
+      "query_file": "queries/QA14.rq",
+      "columns": [
+        "teammate",
+        "team",
+        "messiFrom",
+        "messiTo",
+        "teammateFrom",
+        "teammateTo"
+      ],
+      "row_count": 25,
+      "rows": [
+        [
+          "http://www.example.org/sports-ontology#AlejandroGomez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AlexisMacAllister",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AngelCorrea",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#AngelDiMaria",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#CristianRomero",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EmilianoMartinez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#EnzoFernandez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ExequielPalacios",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#FrancoArmani",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GermanPezzella",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GeronimoRulli",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GonzaloMontiel",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#GuidoRodriguez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#JuanFoyth",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#JulianAlvarez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LautaroMartinez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LeandroParedes",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#LisandroMartinez",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#MarcosAcuna",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NahuelMolina",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NicolasOtamendi",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#NicolasTagliafico",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#PauloDybala",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#RodrigoDePaul",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ],
+        [
+          "http://www.example.org/sports-ontology#ThiagoAlmada",
+          "http://www.example.org/sports-ontology#ArgentinaNationalTeam",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00",
+          "2022-11-20T00:00:00",
+          "2022-12-18T00:00:00"
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "query": "QA15",
+      "query_file": "queries/QA15.rq",
+      "columns": [
+        "issue",
+        "entity",
+        "detail"
+      ],
+      "row_count": 0,
+      "rows": [],
+      "status": "ok"
+    }
+  ]
+}

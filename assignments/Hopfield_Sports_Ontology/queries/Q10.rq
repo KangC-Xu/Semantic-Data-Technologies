@@ -1,0 +1,13 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which athletes were Lionel Messi's opponents in recorded official matches?
+# Require both a recorded opponent relationship and evidence that both athletes played in the same competition match.
+SELECT DISTINCT ?opponent ?match ?competition
+WHERE {
+  sports:LionelMessi sports:hasOpponent ?opponent ;
+                     sports:playedInMatch ?match .
+  ?opponent sports:playedInMatch ?match .
+  ?match sports:inCompetition ?competition .
+  FILTER (?opponent != sports:LionelMessi)
+}
+ORDER BY ?competition ?match ?opponent

@@ -1,0 +1,13 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which coaches have coached both football and basketball teams?
+# An empty result means the dataset contains no supporting coaching records; do not invent a cross-sport appointment.
+SELECT DISTINCT ?coach ?footballTeam ?basketballTeam
+WHERE {
+  ?footballTeam sports:playsSport sports:Football ;
+                sports:hasCoach ?coach .
+  ?basketballTeam sports:playsSport sports:Basketball ;
+                  sports:hasCoach ?coach .
+  FILTER (?footballTeam != ?basketballTeam)
+}
+ORDER BY ?coach ?footballTeam ?basketballTeam

@@ -1,0 +1,12 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which competitions has a particular athlete participated in?
+# Parameter: Lionel Messi. Include the represented team when it is recorded.
+SELECT DISTINCT ?competition ?team
+WHERE {
+  ?participation a sports:AthleteParticipation ;
+                 sports:participationAthlete sports:LionelMessi ;
+                 sports:participationCompetition ?competition .
+  OPTIONAL { ?participation sports:representingTeam ?team . }
+}
+ORDER BY ?competition ?team

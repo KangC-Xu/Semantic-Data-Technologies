@@ -1,0 +1,14 @@
+PREFIX sports: <http://www.example.org/sports-ontology#>
+
+# Question: Which team has won the most men's FIFA World Cup titles?
+# Compare titles from this tournament series only, rather than total trophies from unrelated competitions.
+# Return every team tied for the highest title count.
+SELECT DISTINCT ?team ?titles
+WHERE {
+  { SELECT (MAX(?count) AS ?maxTitles)
+    WHERE { ?candidate sports:fifaWorldCupTitles ?count . }
+  }
+  ?team sports:fifaWorldCupTitles ?titles .
+  FILTER (?titles = ?maxTitles)
+}
+ORDER BY ?team
