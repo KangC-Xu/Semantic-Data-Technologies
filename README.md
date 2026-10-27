@@ -2,6 +2,12 @@
 
 Coursework and practical materials for Semantic Data Technologies (MOD004979).
 
+## Week 3 NLP and SPARQL practicals
+
+The self-contained [Week 3 folder](assignments/Week3_NLP_SPARQL/README.md) contains both bilingual notebooks, the source library dataset, required English NLP resources and portable launch configuration. The SPARQL notebook queries a real Fuseki `library` dataset and covers 19 tutorial examples plus 12 homework tasks.
+
+On a new Windows x64 computer with Miniconda installed, double-click [environment/install-environment.bat](environment/install-environment.bat) once to prepare the software, update the ARU Python environment and register its Jupyter kernel. Then follow the assignment's run instructions.
+
 ## Hopfield sports ontology
 
 The [assignment folder](assignments/Hopfield_Sports_Ontology/) contains the English OWL ontology, 37 SPARQL queries, checked results, validation records and bilingual operation guides.

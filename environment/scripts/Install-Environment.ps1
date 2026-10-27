@@ -6,6 +6,7 @@ $projectRoot = Split-Path -Parent $PSScriptRoot
 $repositoryRoot = Split-Path -Parent $projectRoot
 $toolsRoot = Join-Path $projectRoot 'tools'
 $downloadsRoot = Join-Path $projectRoot 'downloads'
+$environmentFile = Join-Path $projectRoot 'environment.yml'
 
 try {
     $cpuArchitecture = (Get-CimInstance Win32_Processor | Select-Object -First 1).Architecture
@@ -76,9 +77,15 @@ try {
     $envList = & $condaExe env list --json
     if ($LASTEXITCODE -ne 0) { throw '读取 Conda 环境失败。' }
     $aruEnvs = @((($envList -join "`n") | ConvertFrom-Json).envs | Where-Object { (Split-Path $_ -Leaf) -ieq 'ARU' })
+    $environmentText = Get-Content -LiteralPath $environmentFile -Raw -Encoding UTF8
+    # shortcut: 仅解析本仓库固定缩进的依赖清单，使用复杂 YAML 时再改为完整解析。
+    $dependencyText = ($environmentText -split '(?m)^dependencies:[ \t]*\r?\n', 2)[1]
+    $condaPackages = @([regex]::Matches($dependencyText, '(?m)^  - ([\w.-]+(?:=[^:\s]+)?)[ \t]*\r?$') | ForEach-Object { $_.Groups[1].Value })
+    $pipPackages = @([regex]::Matches($environmentText, '(?m)^\s*-\s*([\w.-]+==[^\s]+)[ \t]*\r?$') | ForEach-Object { $_.Groups[1].Value })
+    if ($condaPackages.Count -lt 3 -or $pipPackages.Count -eq 0) { throw 'environment.yml 的依赖清单为空或格式不完整。' }
     if ($aruEnvs.Count -eq 0) {
         if ($CheckOnly) { throw '未找到 ARU 环境，请运行 install-environment.bat。' }
-        & $condaExe env create --file (Join-Path $projectRoot 'environment.yml') --yes
+        & $condaExe create --name ARU --override-channels --channel conda-forge @condaPackages --yes
         if ($LASTEXITCODE -ne 0) { throw '创建 ARU 环境失败，请查看上方首个错误；已有环境未删除。' }
         $envList = & $condaExe env list --json
         if ($LASTEXITCODE -ne 0) { throw '读取新环境失败。' }
@@ -87,20 +94,38 @@ try {
     if ($aruEnvs.Count -ne 1) { throw 'ARU 环境位置不唯一或创建失败，请先检查 conda env list。' }
     $pythonExe = Join-Path $aruEnvs[0] 'python.exe'
     if (-not (Test-Path -LiteralPath $pythonExe -PathType Leaf)) { throw 'ARU 环境缺少 Python，已保留环境且未覆盖。' }
+    if (-not $CheckOnly) {
+        Write-Host '正在按 environment.yml 补齐 ARU 课程依赖，不清空环境。'
+        & $condaExe install --prefix $aruEnvs[0] --override-channels --channel conda-forge @condaPackages --yes
+        if ($LASTEXITCODE -ne 0) { throw '更新 ARU 的 Python/SQLite 失败，请查看上方首个错误；未删除环境。' }
+        & $pythonExe -m pip install @pipPackages
+        if ($LASTEXITCODE -ne 0) { throw '更新 ARU 的课程依赖失败，请查看上方首个错误；可修复后重新运行。' }
+    }
     $verifyCode = @'
 import importlib.metadata as metadata
 from pathlib import Path
 import re
+import sqlite3
 import sys
-assert sys.version_info[:2] == (3, 12), '需要 Python 3.12'
-for name, version in re.findall(r'^\s*-\s*([\w.-]+)==([^\s]+)\s*$', Path(sys.argv[1]).read_text(encoding='utf-8-sig'), re.MULTILINE):
+spec = Path(sys.argv[1]).read_text(encoding='utf-8-sig')
+python_version = re.search(r'^  - python=([^\s]+)', spec, re.MULTILINE).group(1)
+sqlite_version = re.search(r'^  - libsqlite=([^\s]+)', spec, re.MULTILINE).group(1)
+assert '.'.join(map(str, sys.version_info[:3])) == python_version, 'Python 版本与 environment.yml 不一致'
+assert sqlite3.sqlite_version == sqlite_version, 'SQLite 运行时与 environment.yml 不一致'
+for name, version in re.findall(r'^\s*-\s*([\w.-]+)==([^\s]+)\s*$', spec, re.MULTILINE):
     assert metadata.version(name) == version, f'{name} 版本与 environment.yml 不一致'
+import socket
+import nltk
+import matplotlib
+import numpy
+from PIL import Image
+from SPARQLWrapper import SPARQLWrapper
 print('ARU 的 Python 及课程依赖版本验证通过')
 '@
-    & $pythonExe -X utf8 -c $verifyCode (Join-Path $projectRoot 'environment.yml')
-    if ($LASTEXITCODE -ne 0) { throw '已有 ARU 环境与依赖清单不一致，已保留，请先检查依赖。' }
+    & $pythonExe -X utf8 -c $verifyCode $environmentFile
+    if ($LASTEXITCODE -ne 0) { throw 'ARU 环境与依赖清单不一致；请运行 install-environment.bat 更新，或根据上方首个错误检查。' }
     & $pythonExe -m pip check
-    if ($LASTEXITCODE -ne 0) { throw 'ARU 存在依赖冲突，请查看上方错误；未自动修改已有环境。' }
+    if ($LASTEXITCODE -ne 0) { throw 'ARU 存在依赖冲突，请查看上方错误；未删除环境。' }
     if (-not $CheckOnly) {
         & $pythonExe -m ipykernel install --sys-prefix --name aru --display-name 'Python (ARU)'
         if ($LASTEXITCODE -ne 0) { throw '注册 Python (ARU) 内核失败。' }

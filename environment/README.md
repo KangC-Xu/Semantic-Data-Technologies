@@ -11,17 +11,19 @@
 | Protégé | 5.6.9，自带 Java 11 | 编辑本体、HermiT 推理、SPARQL 查询，包含仓库现有中文插件和兼容补丁 |
 | Temurin Java | 21.0.12.1 JRE | 运行 Fuseki，无需另配系统 Java |
 | Apache Jena Fuseki | 6.2.0 | 本地知识库与 SPARQL 服务 |
-| Conda 环境 | ARU，Python 3.12 | 语义数据技术、机器学习、深度学习共用环境 |
+| Conda 环境 | ARU，Python 3.12.10、SQLite 3.50.4 | 语义数据技术、机器学习、深度学习共用环境 |
 | JupyterLab | 4.6.4 | 笔记本界面，包含简体中文包 |
 
-Python 清单还包含 RDFLib、SPARQLWrapper 和 ipykernel。PyTorch、TensorFlow 和 GPU 环境尚未配置，后续按课程需要添加。
+Python 清单还包含 RDFLib、SPARQLWrapper、ipykernel，以及本次 NLP 作业使用的 NLTK 3.9.2、Matplotlib 3.10.7、NumPy 2.2.6 和相关固定版本依赖。PyTorch、TensorFlow 和 GPU 环境尚未配置，后续按课程需要添加。
 
 ## 本机启动
 
 - `start-protege.bat`：打开本目录内的 Protégé。首次使用中文界面时，在 Help 菜单勾选简体中文开关。
 - `start-fuseki.bat`：启动本地服务，看到 `Start Fuseki` 后打开 <http://127.0.0.1:3030/>。运行时保留窗口，关闭窗口或按 `Ctrl+C` 会停止服务。
 - `start-jupyterlab.bat`：激活 ARU，浏览器自动打开中文 JupyterLab；文件浏览范围是整个项目，可以访问 `assignments`。
-- `install-environment.bat`：在新电脑恢复软件和 Python 环境；也可用于检查现有安装是否齐全。
+- `install-environment.bat`：在新电脑恢复软件和 Python 环境；已有 ARU 时按 `environment.yml` 补齐或更新课程依赖，不删除其他课程包。先保存并关闭运行中的 Notebook，再执行更新。
+
+只检查、不安装或更新，可在 PowerShell 运行 `powershell -NoProfile -File .\scripts\Install-Environment.ps1 -CheckOnly`。检查包含固定版本、实际模块导入、SQLite 运行时、pip 依赖及 Jupyter 内核。
 
 如果旧位置的 Fuseki 正占用 3030 端口，先在旧服务窗口正常停止，再启动这里的新副本。复制软件本身不需要停止旧服务；复制正在使用的数据库则必须先停止。
 
@@ -31,7 +33,7 @@ Python 清单还包含 RDFLib、SPARQLWrapper 和 ipykernel。PyTorch、TensorFl
 
 1. 保存笔记本，正常停止要迁移的 Fuseki，再复制整个项目，包含本目录的 `tools`、`data` 和 `config`。
 2. Java、Fuseki 和 Protégé 可直接使用相应启动器，盘符和项目位置可以变化。
-3. 新电脑安装 Miniconda 后，双击 `install-environment.bat`，根据 `environment.yml` 创建 ARU 并注册 `Python (ARU)` 内核。已有 ARU 环境会保留，不会删除或覆盖。
+3. 新电脑安装 Miniconda 后，双击 `install-environment.bat`，根据 `environment.yml` 创建或更新 ARU 并注册 `Python (ARU)` 内核。已有环境不会删除，其他课程包不会主动移除。
 4. 桌面快捷方式需要在新电脑重新创建，指向新位置中的启动文件。
 
 ### 通过 Git 同步项目
@@ -41,7 +43,9 @@ Git 只保存脚本、配置和版本清单。数百 MB 的软件运行库、下
 1. 在新电脑克隆完整项目，并安装 Miniconda。下载地址：[Miniconda 官方安装说明](https://www.anaconda.com/docs/getting-started/miniconda/install)。
 2. 双击 `install-environment.bat`。脚本从官方地址下载固定版本，核对校验值后解压，并从上一级仓库的 `plugins/chinese-ui-plugin/dist` 安装两个现有插件。
 3. 首次恢复需要联网。`downloads` 中已有匹配校验值的压缩包时会复用。
-4. 运行上述三个启动器。Python 依赖下载源来自 `environment.yml`，不会向 Conda base 安装课程包。
+4. 运行上述三个启动器。Conda 依赖仅从 conda-forge 安装，Python 包按 `environment.yml` 固定版本安装到 ARU，不会向 Conda base 安装课程包。
+
+NLTK 的分词模型、词典和停用词属于作业数据，不包含在 Python 安装包中；按对应作业文件夹的说明一起迁移或下载。
 
 如果 Miniconda 不在常见位置，可先打开 Miniconda Prompt，再运行安装或启动脚本。
 

@@ -1,5 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
+$environmentText = Get-Content -LiteralPath (Join-Path $projectRoot 'environment.yml') -Raw -Encoding UTF8
+foreach ($requiredPackage in @('rdflib', 'SPARQLWrapper', 'ipykernel', 'jupyterlab', 'nltk', 'matplotlib', 'numpy', 'pillow')) {
+    if ($environmentText -notmatch ('(?m)^\s*-\s*' + [regex]::Escape($requiredPackage) + '==[^\s]+[ \t]*\r?$')) { throw ('课程依赖清单缺少：' + $requiredPackage) }
+}
 $manifest = Get-Content -LiteralPath (Join-Path $projectRoot 'software-manifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 if ($manifest.platform -ne 'windows-x64' -or $manifest.packages.Count -ne 3) { throw '软件清单结构错误。' }
 foreach ($package in $manifest.packages) {

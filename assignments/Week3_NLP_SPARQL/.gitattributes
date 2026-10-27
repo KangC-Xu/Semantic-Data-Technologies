@@ -1,0 +1,5 @@
+*.ipynb text eol=crlf
+*.md text eol=crlf
+*.ttl text eol=crlf
+*.bat text eol=crlf
+*.yml text eol=crlf

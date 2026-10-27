@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/library/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:jane a ex:Author, ex:Person ; foaf:name "Jane Austen" ; ex:fname "Jane" ; ex:lname "Austen" ; foaf:knows ex:charles .
+ex:charles a ex:Author, ex:Person ; foaf:name "Charles Dickens" ; ex:fname "Charles" ; ex:lname "Dickens" .
+ex:pressA a ex:Publisher ; ex:name "Classics Press" ; ex:locatedIn ex:London .
+ex:pressB a ex:Publisher ; ex:name "Heritage Books" ; ex:locatedIn ex:Oxford .
+ex:London ex:country "United Kingdom" .
+ex:Oxford ex:country "United Kingdom" .
+ex:book1 a ex:Book ; ex:title "Pride and Prejudice"@en ; ex:author ex:jane ; ex:publisher ex:pressA ; ex:year 1813 ; ex:price 45 .
+ex:book2 a ex:Book ; ex:title "Emma"@en ; ex:author ex:jane ; ex:publisher ex:pressB ; ex:year 1815 ; ex:price 25 .
+ex:book3 a ex:Book ; ex:title "Mansfield Park"@en ; ex:author ex:jane ; ex:publisher ex:pressA ; ex:price 55 .
+ex:book4 a ex:Book ; ex:title "Oliver Twist"@en ; ex:author ex:charles ; ex:publisher ex:pressB ; ex:year 1838 ; ex:price 70 .
