@@ -31,6 +31,6 @@ Installing dependencies requires internet access. The notebook uses the included
 
 `queries/` contains G01–G10 and S01–S15 extracted from the group workbook. `results/` contains locally generated CSV results and row counts and is excluded from Git. Run `python run_queries.py` in the ARU environment to regenerate them. Xu's five queries return 7, 3, 26, 1 and 135 rows, respectively. Counts describe recorded teaching data.
 
-These are asserted-graph query results, not HermiT or SHACL validation reports. Absence of data does not prove a fact is false. The NLP example uses a fixed question, entity and query template.
+These are asserted-graph query results, not HermiT or SHACL validation reports. Absence of data does not prove a fact is false. The NLP interface uses five question patterns and resolves supported team and athlete names from the ontology; it rejects unsupported or ambiguous inputs.
 
 Screenshots dated 20261025 relate to the earlier ontology and Chinese UI; they are not validation evidence for v3.0. Screenshots dated 20261101 support the individual presentation.
